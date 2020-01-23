@@ -1,9 +1,14 @@
 import React from "react";
+
+import { connect } from "react-redux";
+import { search } from "../actions";
+
 import "../images/eggplant.jpg";
 import "../images/nightshade.jpg";
 import "../images/tomatoes.jpg";
 import "../images/potatoes.jpg";
 import "../images/peppers.jpg";
+
 
 const GenusContainer = ({genusPlants}) => {
 
@@ -22,8 +27,8 @@ const GenusContainer = ({genusPlants}) => {
 
                         return (
                             <figure className="genusImgAndName" key={plant}>
-                                <img src={imgUrl} />
-                                <figcaption>{plant[0].toUpperCase() + plant.slice(1, plant.length)}</figcaption>
+                                <img src={imgUrl} onClick={() => search(plant)} />
+                                <figcaption onClick={() => search(plant)}>{plant[0].toUpperCase() + plant.slice(1, plant.length)}</figcaption>
                             </figure>
                         )
 
@@ -38,4 +43,13 @@ const GenusContainer = ({genusPlants}) => {
     )
 }
 
-export default GenusContainer;
+const mapStateToProps = (state) => {
+    return {
+
+        showResults: state.showResults,
+        commonName: state.commonName,
+        species: state.species
+    }
+}
+
+export default connect(mapStateToProps, { connect})(GenusContainer);

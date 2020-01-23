@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
+
 import Header from "./components/Header";
 import GenusContainer from "./components/GenusContainer";
+import SearchResults from "./components/SearchResults";
 
 import "./App.css";
 
@@ -14,9 +16,9 @@ const App = () => {
       <Header/>
       <GenusContainer genusPlants={solanum} />
       <GenusContainer genusPlants={capsicum} />
+      <SearchResults />
     </div>
   )
-
 
 };
 

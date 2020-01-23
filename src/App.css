@@ -67,6 +67,8 @@ figure {
 
 .genusImgAndName img:hover {
     cursor: pointer;
+    background-color: #FFFFFF;
+    filter: brightness(80%);
 }
 
 figcaption {
@@ -75,4 +77,8 @@ figcaption {
     font-weight: bold;
 
     cursor: pointer;
+}
+
+.searchResults {
+    background-color: #220022;
 }
