@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import GenusContainer from "./components/GenusContainer";
 
-export default () => (
-  <>
-    <h1>Welcome to React Parcel Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
-  </>
-);
+import "./App.css";
+
+const App = () => {
+
+
+  return (
+    <div>
+      <Header/>
+      <GenusContainer />
+    </div>
+  )
+
+  
+};
+
+export default App;
