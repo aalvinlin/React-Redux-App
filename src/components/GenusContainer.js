@@ -1,12 +1,11 @@
 import React from "react";
-import eggplantImg from "../images/eggplant.jpg";
-import nightshadeImg from "../images/nightshade.jpg";
-import tomatoImg from "../images/tomatoes.jpg";
-import potatoImg from "../images/potatoes.jpg";
-import pepperImg from "../images/peppers.jpg";
+import "../images/eggplant.jpg";
+import "../images/nightshade.jpg";
+import "../images/tomatoes.jpg";
+import "../images/potatoes.jpg";
+import "../images/peppers.jpg";
 
-
-const GenusContainer = () => {
+const GenusContainer = ({genusPlants}) => {
 
     return (
 
@@ -16,34 +15,20 @@ const GenusContainer = () => {
                 <h2 className="latinName">Genus: Solanum</h2>
 
                 <div className="imgContainer">
-                    <figure className="genusImgAndName">
-                        <img src={nightshadeImg} />
-                        <figcaption>Nightshade</figcaption>
-                    </figure>
-                    <figure className="genusImgAndName">
-                        <img src={tomatoImg} />
-                        <figcaption>Tomatoes</figcaption>
-                    </figure>
-                    <figure className="genusImgAndName">
-                        <img src={eggplantImg} />
-                        <figcaption>Eggplant</figcaption>
-                    </figure>
-                    <figure className="genusImgAndName">
-                        <img src={potatoImg} />
-                        <figcaption>Potatoes</figcaption>
-                    </figure>
-                </div>
-                
-            </section>
 
-            <section className="genusDiv">
-                <h2 className="latinName">Genus: Capsicum</h2>
+                    {genusPlants.map(plant => {
 
-                <div className="imgContainer">
-                    <figure className="genusImgAndName">
-                        <img src={pepperImg} />
-                        <figcaption>Peppers</figcaption>
-                    </figure>
+                        let imgUrl = require(`../images/${plant}.jpg`);
+
+                        return (
+                            <figure className="genusImgAndName" key={plant}>
+                                <img src={imgUrl} />
+                                <figcaption>{plant[0].toUpperCase() + plant.slice(1, plant.length)}</figcaption>
+                            </figure>
+                        )
+
+                    })}
+                    
                 </div>
                 
             </section>

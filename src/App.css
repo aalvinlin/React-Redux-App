@@ -65,8 +65,14 @@ figure {
     border-radius: 5px;
 }
 
+.genusImgAndName img:hover {
+    cursor: pointer;
+}
+
 figcaption {
-    display: block;
+    text-align: center;
     margin: 0.5rem auto;
     font-weight: bold;
+
+    cursor: pointer;
 }

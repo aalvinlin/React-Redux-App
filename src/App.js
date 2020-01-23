@@ -6,15 +6,18 @@ import "./App.css";
 
 const App = () => {
 
+  const solanum = ["nightshade", "tomatoes", "eggplant", "potatoes"];
+  const capsicum = ["peppers"];
 
   return (
     <div>
       <Header/>
-      <GenusContainer />
+      <GenusContainer genusPlants={solanum} />
+      <GenusContainer genusPlants={capsicum} />
     </div>
   )
 
-  
+
 };
 
 export default App;
