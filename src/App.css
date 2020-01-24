@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+body {
+    background-color: #110022;
+    color: #CCCCCC;
+}
+
+#root {
+    padding: 1%;
+}
+
+h1, h2 {
+    color: #DDDDDD;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.latinName {
+    font-style: oblique;
+}
+
+section {
+    background-color: #660033;
+    padding: 1rem;
+    margin: 2%
+}
+
+.taxonomy {
+    background-color: #220022;
+    color: #CCCCCC;
+}
+
+.taxonomyList {
+    display: flex;
+    justify-content: space-around;
+
+    font-weight: bold;
+}
+
+.imgContainer {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.genusImgAndName {
+    width: 22.5%;
+}
+
+figure {
+    margin: 0;
+}
+
+.genusImgAndName img {
+    width: 100%; height: auto;
+    border-radius: 5px;
+}
+
+.genusImgAndName img:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    filter: brightness(80%);
+}
+
+figcaption {
+    text-align: center;
+    margin: 0.5rem auto;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.searchResults {
+    background-color: #220022;
+}
