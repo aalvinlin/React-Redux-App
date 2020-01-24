@@ -7,8 +7,8 @@ const Taxonomy = () => {
             <h2>Taxonomy</h2>
 
             <div className="taxonomyList">    
-                <p>Kingdom: <span className="latinName">Plantae</span></p>
-                <p>Phylum: <span className="latinName">?</span></p>
+                <p>Kingdom: <span>Plantae</span></p>
+                <p>Phylum: <span>?</span></p>
                 <p>Order: <span className="latinName">Solanales</span></p>
                 <p>Family: <span className="latinName">Solanaceae</span></p>
             </div>

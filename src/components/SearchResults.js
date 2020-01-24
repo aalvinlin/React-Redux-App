@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const SearchResults = ({showResults, commonName, species}) => {
-
+  
     return (
         <section className="searchResults">
             <h2>Search Results</h2>

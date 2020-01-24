@@ -9,8 +9,7 @@ import "../images/tomatoes.jpg";
 import "../images/potatoes.jpg";
 import "../images/peppers.jpg";
 
-
-const GenusContainer = ({genus, genusPlants}) => {
+const GenusContainer = ({genus, genusPlants, search}) => {
 
     return (
 
@@ -30,6 +29,7 @@ const GenusContainer = ({genus, genusPlants}) => {
                                 <img src={imgUrl} onClick={() => search(plant)} />
                                 <figcaption onClick={() => search(plant)}>{plant[0].toUpperCase() + plant.slice(1, plant.length)}</figcaption>
                             </figure>
+
                         )
 
                     })}
@@ -52,4 +52,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { connect})(GenusContainer);
+export default connect(mapStateToProps, { search })(GenusContainer);

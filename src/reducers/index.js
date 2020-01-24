@@ -21,9 +21,6 @@ const testState = {
 
 export const reducer = (state = initialState, action) => {
 
-    console.log("in reducer with action type", action.type);
-    console.log("payload is", action.payload)
-
     switch (action.type) {
         
         case FETCHING_DATA_START:
