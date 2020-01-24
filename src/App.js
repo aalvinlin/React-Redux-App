@@ -14,8 +14,8 @@ const App = () => {
   return (
     <div>
       <Header/>
-      <GenusContainer genusPlants={solanum} />
-      <GenusContainer genusPlants={capsicum} />
+      <GenusContainer genus="Solanum" genusPlants={solanum} />
+      <GenusContainer genus="Capsicum" genusPlants={capsicum} />
       <SearchResults />
     </div>
   )

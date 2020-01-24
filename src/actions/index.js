@@ -6,7 +6,9 @@ export const FETCHING_DATA_FAILURE = "FETCHING_DATA_FAILURE";
 
 export const search = (searchQuery) => dispatch => {
 
-    dispatch({ type: FETCHING_DATA_START });
+    console.log("clicked with search query", searchQuery);
+
+    dispatch({ type: FETCHING_DATA_START, payload: searchQuery });
 
     axios.get("https://swapi.co/api/people/1")
         .then(response => {

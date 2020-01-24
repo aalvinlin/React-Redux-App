@@ -1,13 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const SearchResults = () => {
+const SearchResults = ({showResults, commonName, species}) => {
 
     return (
         <section className="searchResults">
             <h2>Search Results</h2>
 
-            search results
+            <p>Common name: {commonName}</p>
+
+            <p>Known species: {species.join(", ")}</p>
             
         </section>
     )

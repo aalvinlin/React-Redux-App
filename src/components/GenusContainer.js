@@ -10,14 +10,14 @@ import "../images/potatoes.jpg";
 import "../images/peppers.jpg";
 
 
-const GenusContainer = ({genusPlants}) => {
+const GenusContainer = ({genus, genusPlants}) => {
 
     return (
 
         <div className="genusContainer">
 
             <section className="genusDiv">
-                <h2 className="latinName">Genus: Solanum</h2>
+                <h2 className="latinName">Genus: {genus}</h2>
 
                 <div className="imgContainer">
 

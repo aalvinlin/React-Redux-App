@@ -21,7 +21,8 @@ const testState = {
 
 export const reducer = (state = initialState, action) => {
 
-    console.log("in reducer", action, action.payload);
+    console.log("in reducer with action type", action.type);
+    console.log("payload is", action.payload)
 
     switch (action.type) {
         
@@ -47,6 +48,6 @@ export const reducer = (state = initialState, action) => {
 
             console.log("default case...");
 
-            return state;
+            return testState;
     }
 }
